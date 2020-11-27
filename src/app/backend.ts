@@ -15,12 +15,6 @@ async function main( ){
 
     server.use('/api', ...components); // for 1<components.leght
 
-    /* server.use('/api',function(req: Request, res: Response){
-        res.send({
-            message:"hola"
-        })
-    }) */
-
     try{
         await mongooseModule.connect();
         console.log("Conexion exitosa");

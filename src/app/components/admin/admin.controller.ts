@@ -21,14 +21,7 @@ function deleteAdmin(id: string) {
 function addAdmin(admin: Admin): Promise<Admin>{
 
     admin.nombres = admin.nombres?.toUpperCase();
-    admin.apellidos = admin.apellidos?.toUpperCase();
-    admin.sexo = admin.sexo?.toUpperCase();
-    admin.cargo = admin.cargo?.toUpperCase();
     admin.email = admin.email?.toLowerCase();
-    admin.rut = admin.rut?.toUpperCase();
-
-    admin.createdAt = new Date();
-
     return adminRepository.addAdmin(admin);
 }
 
