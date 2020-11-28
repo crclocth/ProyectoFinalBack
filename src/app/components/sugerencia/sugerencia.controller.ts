@@ -20,8 +20,9 @@ function deleteSugerencia(id: string) {
 
 function addSugerencia(sugerencia: Sugerencia): Promise<Sugerencia>{
 
-    sugerencia.nombres = sugerencia.nombres?.toUpperCase();
     sugerencia.email = sugerencia.email?.toLowerCase();
+    sugerencia.asunto = sugerencia.asunto?.toLowerCase();
+    sugerencia.mensaje = sugerencia.mensaje?.toLowerCase();
     return sugerenciaRepository.addSugerencia(sugerencia);
 }
 
