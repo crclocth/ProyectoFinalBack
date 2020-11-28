@@ -7,4 +7,4 @@ const express_1 = __importDefault(require("express"));
 const sugerencia_network_1 = __importDefault(require("./sugerencia.network"));
 const sugerencia = express_1.default();
 sugerencia.use('/sugerencia', sugerencia_network_1.default);
-exports.default = user;
+exports.default = sugerencia;
