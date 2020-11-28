@@ -16,10 +16,11 @@ function patchSugerencia(id, sugerencia) {
 function deleteSugerencia(id) {
     return sugerencia_repository_1.default.deleteSugerencia(id);
 }
-function addSugerencia(user) {
-    var _a, _b;
-    user.nombres = (_a = user.nombres) === null || _a === void 0 ? void 0 : _a.toUpperCase();
-    user.email = (_b = user.email) === null || _b === void 0 ? void 0 : _b.toLowerCase();
-    return sugerencia_repository_1.default.addSugerencia(user);
+function addSugerencia(sugerencia) {
+    var _a, _b, _c;
+    sugerencia.email = (_a = sugerencia.email) === null || _a === void 0 ? void 0 : _a.toLowerCase();
+    sugerencia.asunto = (_b = sugerencia.asunto) === null || _b === void 0 ? void 0 : _b.toLowerCase();
+    sugerencia.mensaje = (_c = sugerencia.mensaje) === null || _c === void 0 ? void 0 : _c.toLowerCase();
+    return sugerencia_repository_1.default.addSugerencia(sugerencia);
 }
 exports.default = { addSugerencia, getSugerencia, getSugerenciaById, patchSugerencia, deleteSugerencia };
