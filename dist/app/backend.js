@@ -25,11 +25,6 @@ function main() {
         server.use(morgan_1.default("dev"));
         server.use(cors_1.default());
         server.use('/api', ...components_1.default); // for 1<components.leght
-        /* server.use('/api',function(req: Request, res: Response){
-            res.send({
-                message:"hola"
-            })
-        }) */
         try {
             yield mongoose_module_1.default.connect();
             console.log("Conexion exitosa");

@@ -9,8 +9,8 @@ async function getUserById(id: string): Promise<User | null>{
     return userSchema.findOne({ _id: id });
 }
 
-async function addUser(admin: User): Promise<User>{    
-    return userSchema.create<User>(admin);
+async function addUser(user: User): Promise<User>{    
+    return userSchema.create<User>(user);
 }
 
 async function deleteUser(id: string) {

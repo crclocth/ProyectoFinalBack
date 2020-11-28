@@ -8,4 +8,4 @@ const definition = {
     contraseñaRepetida: { type: String, required: true }
 };
 const schema = new mongoose_1.Schema(definition);
-exports.default = mongoose_1.model('Admin', schema, 'admin');
+exports.default = mongoose_1.model('User', schema, 'user');

@@ -14,12 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const response_module_1 = __importDefault(require("../../modules/response.module"));
-const admin_controller_1 = __importDefault(require("./admin.controller"));
+const user_controller_1 = __importDefault(require("./user.controller"));
 const router = express_1.default.Router();
 router.get("/all", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const result = yield admin_controller_1.default.getAdmin();
+            const result = yield user_controller_1.default.getUser();
             response_module_1.default.success(req, res, result);
         }
         catch (error) {
@@ -31,7 +31,7 @@ router.get("/:id", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const id = req.params['id'];
         try {
-            const result = yield admin_controller_1.default.getAdminById(id);
+            const result = yield user_controller_1.default.getUserById(id);
             response_module_1.default.success(req, res, result);
         }
         catch (error) {
@@ -44,7 +44,7 @@ router.post("/add", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const body = req.body;
         try {
-            const result = yield admin_controller_1.default.addAdmin(body);
+            const result = yield user_controller_1.default.addUser(body);
             response_module_1.default.success(req, res, result, 201);
         }
         catch (error) {
@@ -55,7 +55,7 @@ router.post("/add", function (req, res) {
 router.delete("/delete", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const ver = yield admin_controller_1.default.deleteAdmin(req.body._id);
+            const ver = yield user_controller_1.default.deleteUser(req.body._id);
             if (ver != null) {
                 response_module_1.default.success(req, res, "Delete Success", 200);
             }
@@ -72,7 +72,7 @@ router.patch("/:id", function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const { id } = req.params;
         try {
-            const modPaciente = yield admin_controller_1.default.patchAdmin(id, req.body);
+            const modPaciente = yield user_controller_1.default.patchUser(id, req.body);
             response_module_1.default.success(req, res, modPaciente, 201);
         }
         catch (error) {
