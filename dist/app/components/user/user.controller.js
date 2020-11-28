@@ -10,8 +10,8 @@ function getUser() {
 function getUserById(id) {
     return user_repository_1.default.getUserById(id);
 }
-function patchUser(id, admin) {
-    return user_repository_1.default.patchUser(id, admin);
+function patchUser(id, user) {
+    return user_repository_1.default.patchUser(id, user);
 }
 function deleteUser(id) {
     return user_repository_1.default.deleteUser(id);

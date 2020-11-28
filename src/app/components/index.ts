@@ -3,7 +3,7 @@ import admin from "./admin"
 import user from './user/index';
 
 const components: Express[] = [
-    admin, user
+    admin, user,
 ];
 
 export default components;

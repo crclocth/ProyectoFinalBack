@@ -10,8 +10,8 @@ function getUserById(id: string): Promise<User | null>{
     return userRepository.getUserById(id);
 }
 
-function patchUser(id: string, admin: Partial<User>): Promise<Partial<User | null>>{
-    return userRepository.patchUser(id, admin);
+function patchUser(id: string, user: Partial<User>): Promise<Partial<User | null>>{
+    return userRepository.patchUser(id, user);
 }
 
 function deleteUser(id: string) {
