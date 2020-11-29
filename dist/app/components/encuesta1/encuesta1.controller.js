@@ -10,8 +10,8 @@ function getEncuesta1() {
 function getEncuesta1ById(id) {
     return encuesta1_repository_1.default.getEncuesta1ById(id);
 }
-function patchEncuesta1(id, recuperar) {
-    return encuesta1_repository_1.default.patchEncuesta1(id, recuperar);
+function patchEncuesta1(id, encuesta1) {
+    return encuesta1_repository_1.default.patchEncuesta1(id, encuesta1);
 }
 function deleteEncuesta1(id) {
     return encuesta1_repository_1.default.deleteEncuesta1(id);

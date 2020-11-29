@@ -10,8 +10,8 @@ function getEncuesta1ById(id: string): Promise<Encuesta1 | null>{
     return encuesta1Repository.getEncuesta1ById(id);
 }
 
-function patchEncuesta1(id: string, recuperar: Partial<Encuesta1>): Promise<Partial<Encuesta1 | null>>{
-    return encuesta1Repository.patchEncuesta1(id, recuperar);
+function patchEncuesta1(id: string, encuesta1: Partial<Encuesta1>): Promise<Partial<Encuesta1 | null>>{
+    return encuesta1Repository.patchEncuesta1(id, encuesta1);
 }
 
 function deleteEncuesta1(id: string) {
